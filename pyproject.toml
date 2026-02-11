@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wig-aesthetic-mcp"
+version = "1.0.0"
+description = "MCP server for wig design aesthetic composition with categorical cost optimization"
+authors = [{name = "Dal Marsters", email = "dal@lushy.com"}]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = [
+    "mcp",
+    "fastmcp",
+    "wig-design",
+    "aesthetic-composition",
+    "categorical-theory",
+    "image-generation",
+    "prompt-enhancement",
+    "cost-optimization"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Artistic Software",
+    "Topic :: Multimedia :: Graphics"
+]
+
+dependencies = [
+    "fastmcp>=0.1.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/lushy/wig-aesthetic-mcp"
+Documentation = "https://github.com/lushy/wig-aesthetic-mcp#readme"
+Repository = "https://github.com/lushy/wig-aesthetic-mcp"
+Issues = "https://github.com/lushy/wig-aesthetic-mcp/issues"
+
+[project.scripts]
+wig-aesthetic-mcp = "wig_aesthetic_mcp:mcp.run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["test_validation.py"]
+python_files = "test_*.py"
+python_functions = "test_*"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
