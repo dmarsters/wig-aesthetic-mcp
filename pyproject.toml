@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "wig-aesthetic-mcp"
 version = "1.0.0"
 description = "MCP server for wig design aesthetic composition with categorical cost optimization"
-authors = [{name = "Dal Marsters", email = "dal@lushy.com"}]
+authors = [{name = "Dal Marsters", email = "dal@lushy.app"}]
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -44,12 +44,6 @@ dev = [
     "ruff>=0.1.0",
     "mypy>=1.0.0"
 ]
-
-[project.urls]
-Homepage = "https://github.com/lushy/wig-aesthetic-mcp"
-Documentation = "https://github.com/lushy/wig-aesthetic-mcp#readme"
-Repository = "https://github.com/lushy/wig-aesthetic-mcp"
-Issues = "https://github.com/lushy/wig-aesthetic-mcp/issues"
 
 [project.scripts]
 wig-aesthetic-mcp = "wig_aesthetic_mcp:mcp.run"
