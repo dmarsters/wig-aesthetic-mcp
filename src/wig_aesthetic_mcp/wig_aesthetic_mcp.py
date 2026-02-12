@@ -11,6 +11,9 @@ Achieves ~60% cost savings through categorical composition.
 
 from fastmcp import FastMCP
 from typing import Dict, List, Optional
+import math
+import numpy as np
+
 import json
 
 mcp = FastMCP("Wig Aesthetic")
@@ -722,10 +725,6 @@ def apply_style_context(
 # ============================================================================
 # PHASE 2.6: RHYTHMIC COMPOSITION TOOLS
 # ============================================================================
-
-import math
-import numpy as np
-
 
 def _generate_oscillation(num_steps: int, num_cycles: float, pattern: str):
     """Generate oscillation alpha values [0, 1]."""
