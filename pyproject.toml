@@ -34,7 +34,8 @@ classifiers = [
 ]
 
 dependencies = [
-    "fastmcp>=0.1.0"
+    "fastmcp>=0.1.0",
+    "numpy"
 ]
 
 [project.optional-dependencies]
